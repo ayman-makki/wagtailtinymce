@@ -167,8 +167,8 @@ def docs_richtexteditor_js():
     return preload + js_includes
 
 
-@hooks.register('insert_tinymce_colors')
-def my_plugin_js():
+@hooks.register('insert_tinymce_js')
+def colors_richtexteditor_js():
     return format_html(
         """
         <script>
@@ -179,8 +179,8 @@ def my_plugin_js():
         to_js_primitive(translation.to_locale(translation.get_language())),
     )
 
-@hooks.register('insert_tinymce_emoticons')
-def my_plugin_js():
+@hooks.register('insert_tinymce_js')
+def emoticons_richtexteditor_js():
     return format_html(
         """
         <script>
