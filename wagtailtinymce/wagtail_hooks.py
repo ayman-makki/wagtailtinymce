@@ -165,3 +165,28 @@ def docs_richtexteditor_js():
         'wagtaildocs/js/document-chooser-modal.js',
     ])
     return preload + js_includes
+
+
+@hooks.register('insert_tinymce_colors')
+def my_plugin_js():
+    return format_html(
+        """
+        <script>
+            registerMCEPlugin("colorpicker", {);
+        </script>
+        """,
+        mark_safe(json.dumps(static("static/wagtailtinymce/js/vendor/tinymce/plugins/colorpicker/plugin.js"))),
+        to_js_primitive(translation.to_locale(translation.get_language())),
+    )
+
+@hooks.register('insert_tinymce_emoticons')
+def my_plugin_js():
+    return format_html(
+        """
+        <script>
+            registerMCEPlugin("colorpicker", {);
+        </script>
+        """,
+        mark_safe(json.dumps(static("static/wagtailtinymce/js/vendor/tinymce/plugins/emoticons/plugin.js"))),
+        to_js_primitive(translation.to_locale(translation.get_language())),
+    )
