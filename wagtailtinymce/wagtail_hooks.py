@@ -175,7 +175,7 @@ def colors_richtexteditor_js():
             registerMCEPlugin("colorpicker", {}, {});
         </script>
         """,
-        mark_safe(json.dumps(static("static/wagtailtinymce/js/vendor/tinymce/plugins/colorpicker/plugin.js"))),
+        mark_safe(json.dumps(static("wagtailtinymce/js/vendor/tinymce/plugins/colorpicker/plugin.js"))),
         to_js_primitive(translation.to_locale(translation.get_language())),
     )
 
@@ -187,6 +187,6 @@ def emoticons_richtexteditor_js():
             registerMCEPlugin("colorpicker", {}, {});
         </script>
         """,
-        mark_safe(json.dumps(static("static/wagtailtinymce/js/vendor/tinymce/plugins/emoticons/plugin.js"))),
+        mark_safe(json.dumps(static("wagtailtinymce/js/vendor/tinymce/plugins/emoticons/plugin.js"))),
         to_js_primitive(translation.to_locale(translation.get_language())),
     )
