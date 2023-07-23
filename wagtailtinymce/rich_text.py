@@ -58,7 +58,7 @@ class TinyMCERichTextArea(WidgetWithScript, widgets.Textarea):
                     ['link', 'unlink'],
                     ['wagtaildoclink', 'wagtailimage', 'wagtailembed'],
                     ['pastetext', 'fullscreen'],
-                    ['colors', 'emoticons'],
+                    ['colorpicker', 'emoticons'],
                 ]
             ],
             'menus': False,
